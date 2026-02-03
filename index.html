@@ -23,7 +23,7 @@
             padding: 20px;
         }
 
-        .login-form-container {
+        .login-page-wrapper {
             background: white;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -32,12 +32,35 @@
             max-width: 460px;
         }
 
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
+        .login-logo {
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+        }
+
+        .login-logo-img {
+            width: 222px;
+            height: 30px;
+            background: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjIyIDMwIj48c3R5bGU+LnN0MSwuc3QyLC5zdDR7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojMDM2NGI4fS5zdDIsLnN0NHtmaWxsOiMwMDc4ZDR9LnN0NHtmaWxsOiMyOGE4ZWF9LnN0OHtlbmFibGUtYmFja2dyb3VuZDpuZXd9LnN0OCwuc3Q5e29wYWNpdHk6LjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGR9PC9zdHlsZT48cGF0aCBpZD0iRmlsbC0zIiBkPSJNMjkuNyAxNi4zYy4xLS40LjItLjkuMy0xLjMgMC0uMi0uMS0uNC0uMy0uNUwxOS41IDguN2wtLjEtLjFjLS40LS4yLS45LS4yLTEuMiAwIDAgMC0uMSAwLS4xLjFMNy44IDE0LjRjLS4yLjEtLjMuMy0uMy41LjEuNC4yLjkuMyAxLjNsMTAuOCA3LjkgMTEuMS03Ljh6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzBhMjc2NyIvPjxwYXRoIGlkPSJGaWxsLTEiIGNsYXNzPSJzdDEiIGQ9Ik0xMC4zIDJDOS42IDIgOSAyLjYgOSAzLjNWNWw5LjUgMi44TDI4IDVWMy4zYzAtLjctLjYtMS4zLTEuMy0xLjNIMTAuM3oiLz48cGF0aCBpZD0iRmlsbC04IiBjbGFzcz0ic3QyIiBkPSJNOSAxMGg3VjVIOXoiLz48cGF0aCBpZD0iRmlsbC0xMCIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM1MGQ5ZmYiIGQ9Ik0yMiAxMGg2VjVoLTZ6Ii8+PHBhdGggaWQ9IlJlY3RhbmdsZSIgY2xhc3M9InN0MSIgZD0iTTkgMTBoN3Y1SDl6Ii8+PHBhdGggaWQ9IkZpbGwtMTIiIGNsYXNzPSJzdDIiIGQ9Ik0xNiAxNWg2di01aC02eiIvPjxwYXRoIGlkPSJGaWxsLTEyLUNvcHkiIGNsYXNzPSJzdDQiIGQ9Ik0xNiAxMGg2VjVoLTZ6Ii8+PHBhdGggaWQ9IkZpbGwtMjAiIGNsYXNzPSJzdDkiIGQ9Ik0xNyAyMi43VjcuM2MwLS43LS42LTEuMy0xLjMtMS4zSDl2Ny4xbC0xLjcuOWMtLjIuMS0uMy4zLS4zLjVWMjRoOC43Yy43IDAgMS4zLS42IDEuMy0xLjMiLz48cGF0aCBpZD0iRmlsbC0yMSIgY2xhc3M9InN0OSIgZD0iTTE2IDIzLjdWOC4zYzAtLjctLjYtMS4zLTEuMy0xLjNIOXY2LjFsLTEuNy45Yy0uMi4xLS4zLjQtLjMuNlYyNWg3LjdjLjcgMCAxLjMtLjYgMS4zLTEuMyIvPjxwYXRoIGlkPSJGaWxsLTIyIiBjbGFzcz0ic3Q5IiBkPSJNMTYgMjEuN1Y4LjNjMC0uNy0uNi0xLjMtMS4zLTEuM0g5djYuMWwtMS43LjljLS4yLjEtLjMuMy0uMy41VjIzaDcuN2MuNyAwIDEuMy0uNiAxLjMtMS4zIi8+PHBhdGggaWQ9IkZpbGwtMjMiIGNsYXNzPSJzdDkiIGQ9Ik0xNSAyMS44VjkuMmMwLS43LS42LTEuMi0xLjMtMS4ySDl2NS42bC0xLjcuOGMtLjIuMy0uMy40LS4zLjdWMjNoNi43Yy43IDAgMS4zLS41IDEuMy0xLjIiLz48cGF0aCBpZD0iRmlsbC0yNCIgY2xhc3M9InN0MiIgZD0iTTEuMyA3aDEyLjVjLjYgMCAxLjIuNiAxLjIgMS4ydjEyLjVjMCAuNy0uNiAxLjItMS4zIDEuMkgxLjNDLjYgMjIgMCAyMS40IDAgMjAuOFY4LjJDMCA3LjYuNiA3IDEuMyA3Ii8+PHBhdGggaWQ9IkZpbGwtMjUiIGQ9Ik01LjIgMTYuMWMuMi40LjUuOC45IDEuMS40LjMuOS40IDEuNC40LjUgMCAxLS4xIDEuNS0uNC40LS4zLjctLjYuOS0xLjEuMi0uNS4zLTEgLjMtMS41cy0uMS0xLS4zLTEuNWMtLjItLjQtLjQtLjgtLjgtMS4xLS40LS4zLS45LS40LTEuNS0uNC0uNSAwLTEgLjEtMS40LjQtLjQuMy0uNy42LS45IDEuMS0uNS45LS41IDItLjEgM20tMS43LTMuOWMuMy0uNy45LTEuMiAxLjYtMS42LjgtLjQgMS42LS42IDIuNS0uNi44IDAgMS42LjIgMi4zLjYuNy40IDEuMi45IDEuNSAxLjYuNC43LjYgMS41LjUgMi4zIDAgLjgtLjIgMS43LS42IDIuNC0uMy43LS45IDEuMi0xLjYgMS42LS42LjMtMS40LjUtMi4yLjUtLjggMC0xLjYtLjItMi40LS42LS43LS40LTEuMi0uOS0xLjYtMS42LS4zLS42LS41LTEuNC0uNS0yLjIgMC0uOC4yLTEuNi41LTIuNCIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNNDcuOCAyMC45aC0yLjF2LTYuM2wtMi4xIDQuMWgtMS40bC0yLjEtNC4xdjYuM0gzOFYxMC4xaDIuMWwyLjggNS44IDIuOC01LjhoMi4xdjEwLjh6bTYuNiAwaC0yLjFWMTAuMWgyLjF2MTAuOHptMTIuMi0zLjNjLS40IDIuMy0yIDMuNC00IDMuNC0xLjIgMC0yLjItLjQtMi45LTEuMS0xLjEtMS4xLTEuMS0yLjMtMS4xLTQuNHMwLTMuMyAxLjEtNC40Yy43LS43IDEuNy0xLjEgMi45LTEuMSAyIDAgMy42IDEuMiA0IDMuNGgtMi4yYy0uMi0uOS0uOC0xLjUtMS44LTEuNS0uNiAwLTEgLjItMS40LjYtLjQuNS0uNSAxLS41IDMuMXMuMSAyLjYuNSAzLjFjLjMuMy44LjYgMS40LjYgMSAwIDEuNi0uNyAxLjgtMS41aDIuMnptMTIgMy4zaC0yLjRMNzQgMTYuNmgtMS41djQuM2gtMi4xVjEwLjFoNC4yYzIuMiAwIDMuNSAxLjUgMy41IDMuMyAwIDEuNS0uOSAyLjUtMiAyLjhsMi41IDQuN3pNNzYgMTMuNGMwLS44LS42LTEuNC0xLjUtMS40aC0ydjIuOWgyYy45LS4xIDEuNS0uNyAxLjUtMS41em0xMy44IDIuMWMwIDIuMSAwIDMuMy0xLjEgNC40LS43LjctMS42IDEuMS0yLjkgMS4xLTEuMiAwLTIuMi0uNC0yLjktMS4xLTEuMS0xLjEtMS4xLTIuMy0xLjEtNC40czAtMy4zIDEuMS00LjRjLjctLjcgMS43LTEuMSAyLjktMS4xczIuMi40IDIuOSAxLjFjMS4xIDEuMSAxLjEgMi4zIDEuMSA0LjR6bS0yLjEgMGMwLTIuMS0uMS0yLjYtLjUtMy0uMy0uMy0uOC0uNi0xLjQtLjZzLTEgLjItMS40LjZjLS40LjUtLjUgMS0uNSAzcy4xIDIuNi41IDNjLjMuMy44LjYgMS40LjZzMS0uMiAxLjQtLjZjLjQtLjQuNS0uOS41LTN6bTEzLjMgMi4yYzAgMi4xLTEuNyAzLjMtNCAzLjMtMS42IDAtMi45LS4zLTMuOS0xLjRsMS40LTEuNGMuNy43IDEuNi45IDIuNi45IDEuMyAwIDEuOS0uNSAxLjktMS40IDAtLjQtLjEtLjctLjMtLjktLjItLjItLjQtLjMtMS0uNGwtMS4zLS4yYy0xLS4xLTEuNi0uNC0yLjEtLjlzLS44LTEuMi0uOC0yLjFjMC0xLjkgMS40LTMuMyAzLjgtMy4zIDEuNSAwIDIuNi40IDMuNSAxLjNsLTEuMyAxLjNjLS43LS43LTEuNS0uNy0yLjItLjctMS4xIDAtMS43LjYtMS43IDEuNCAwIC4zLjEuNi4zLjguMi4yLjUuMyAxIC40bDEuMy4yYzEgLjEgMS42LjQgMi4xLjkuNC41LjcgMS4yLjcgMi4yem0xMS42LTIuMmMwIDIuMSAwIDMuMy0xLjEgNC40LS43LjctMS42IDEuMS0yLjkgMS4xLTEuMiAwLTIuMi0uNC0yLjktMS4xLTEuMS0xLjEtMS4xLTIuMy0xLjEtNC40czAtMy4zIDEuMS00LjRjLjctLjcgMS43LTEuMSAyLjktMS4xczIuMi40IDIuOSAxLjFjMS4xIDEuMSAxLjEgMi4zIDEuMSA0LjR6bS0yLjEgMGMwLTIuMS0uMS0yLjYtLjUtMy0uMy0uMy0uOC0uNi0xLjQtLjYtLjYgMC0xIC4yLTEuNC42LS40LjUtLjUgMS0uNSAzcy4xIDIuNi41IDNjLjMuMy44LjYgMS40LjYuNiAwIDEtLjIgMS40LS42LjQtLjQuNS0uOS41LTN6bTEzLjQtMy41aC01djIuN2g0LjN2MS45aC00LjNWMjFoLTIuMVYxMC4xaDcuMVYxMnptMTAuOCAwaC0yLjh2OC45aC0yLjFWMTJIMTI3di0xLjloNy44VjEyem0xNi45IDMuNWMwIDIuMSAwIDMuMy0xLjEgNC40LS43LjctMS42IDEuMS0yLjkgMS4xcy0yLjItLjQtMi45LTEuMWMtMS4xLTEuMS0xLjEtMi4zLTEuMS00LjRzMC0zLjMgMS4xLTQuNGMuNy0uNyAxLjctMS4xIDIuOS0xLjFzMi4yLjQgMi45IDEuMWMxLjEgMS4xIDEuMSAyLjMgMS4xIDQuNHptLTIuMSAwYzAtMi4xLS4xLTIuNi0uNS0zLS4zLS4zLS44LS42LTEuNC0uNnMtMSAuMi0xLjQuNmMtLjQuNS0uNSAxLS41IDNzLjEgMi42LjUgM2MuMy4zLjguNiAxLjQuNnMxLS4yIDEuNC0uNmMuMy0uNC41LS45LjUtM3ptMTQuMSAxLjdjMCAyLjMtMS44IDMuOC00IDMuOHMtNC0xLjUtNC0zLjh2LTcuMWgyLjF2N2MwIDEuMi43IDIgMS45IDIgMS4xIDAgMS45LS43IDEuOS0ydi03aDIuMXY3LjF6bTExLjMtNS4yaC0yLjh2OC45SDE3MFYxMmgtMi44di0xLjloNy44VjEyem0xMC43IDguOWgtN1YxMC4xaDIuMVYxOWg0Ljl2MS45em0xMC44LTUuNGMwIDIuMSAwIDMuMy0xLjEgNC40LS43LjctMS42IDEuMS0yLjkgMS4xLTEuMiAwLTIuMi0uNC0yLjktMS4xLTEuMS0xLjEtMS4xLTIuMy0xLjEtNC40czAtMy4zIDEuMS00LjRjLjctLjcgMS43LTEuMSAyLjktMS4xczIuMi40IDIuOSAxLjFjMS4xIDEuMSAxLjEgMi4zIDEuMSA0LjR6bS0yLjEgMGMwLTIuMS0uMS0yLjYtLjUtMy0uMy0uMy0uOC0uNi0xLjQtLjZzLTEgLjItMS40LjZjLS40LjUtLjUgMS0uNSAzcy4xIDIuNi41IDNjLjMuMy44LjYgMS40LjZzMS0uMiAxLjQtLjZjLjQtLjQuNS0uOS41LTN6bTEzLjggMGMwIDIuMSAwIDMuMy0xLjEgNC40LS43LjctMS42IDEuMS0yLjkgMS4xLTEuMiAwLTIuMi0uNC0yLjktMS4xLTEuMS0xLjEtMS4xLTIuMy0xLjEtNC40czAtMy4zIDEuMS00LjRjLjctLjcgMS43LTEuMSAyLjktMS4xczIuMi40IDIuOSAxLjFjMS4xIDEuMSAxLjEgMi4zIDEuMSA0LjR6bS0yLjEgMGMwLTIuMS0uMS0yLjYtLjUtMy0uMy0uMy0uOC0uNi0xLjQtLjYtLjYgMC0xIC4yLTEuNC42LS40LjUtLjUgMS0uNSAzcy4xIDIuNi41IDNjLjMuMy44LjYgMS40LjYuNiAwIDEtLjIgMS40LS42LjMtLjQuNS0uOS41LTN6bTE1IDUuNGgtMi41bC0yLjgtNC45LTEuNCAxLjdWMjFoLTIuMVYxMC4xaDIuMXY0LjdsMy44LTQuN2gyLjZsLTMuNiA0LjMgMy45IDYuNXoiIGZpbGw9IiMyMzFmMjAiLz48L3N2Zz4=") no-repeat;
+            display: inline-block;
+        }
+
+        .text-center {
+            text-align: center;
+            font-size: 16px;
             color: #1e293b;
+            margin-bottom: 24px;
+        }
+
+        .mb8 {
+            margin-bottom: 16px;
+        }
+
+        .login-message {
+            margin-bottom: 16px;
+        }
+
+        .login-form-container {
+            width: 100%;
         }
 
         .form-input {
@@ -57,6 +80,14 @@
 
         .form-input::placeholder {
             color: #94a3b8;
+        }
+
+        .login-form-field {
+            font-family: inherit;
+        }
+
+        .mt0 {
+            margin-top: 0;
         }
 
         .z-validation-input {
@@ -97,6 +128,10 @@
             font-size: 12px;
         }
 
+        .mr4 {
+            margin-right: 8px;
+        }
+
         .login-form-forget {
             text-align: right;
             margin-top: 12px;
@@ -113,7 +148,7 @@
             text-decoration: underline;
         }
 
-        .btn-submit {
+        .login-submit {
             width: 100%;
             padding: 14px 16px;
             background: #0ea5e9;
@@ -127,11 +162,11 @@
             margin-top: 24px;
         }
 
-        .btn-submit:hover {
+        .login-submit:hover {
             background: #0284c7;
         }
 
-        .btn-submit:active {
+        .login-submit:active {
             background: #0369a1;
         }
 
@@ -154,61 +189,62 @@
         .ng-hide {
             display: none;
         }
+
+        .ng-scope {
+        }
+
+        .zen-form {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <main class="login-form-container">
-        <h1>Please sign in to access this service</h1>
-        <form method="post" id="loginForm" autocomplete="off">
-            <div class="z-validation-input">
-                <input
-                    class="form-input validation-invalid"
-                    id="login"
-                    name="login"
-                    type="text"
-                    placeholder="Email"
-                    required
-                    autocomplete="off">
-                <div class="validation-wrapper mt4">
-                    <div class="error-icon"></div>
-                    <div id="error-user-name-required">
-                        Email required
+    <div class="login-page-wrapper">
+        <div class="login-logo">
+            <div class="login-logo-img"></div>
+        </div>
+        <div class="text-center mb8">
+            Please sign in to access this service
+        </div>
+        <div class="login-message"></div>
+        <main class="login-form-container">
+            <form method="post" class="zen-form ng-valid-maxlength ng-invalid ng-invalid-required ng-dirty ng-valid-parse ng-invalid-valid-email" name="ctrl.loginForm" autocomplete="off">
+                <div class="z-validation-input">
+                    <input class="form-input login-form-field mt0 ng-scope ng-valid-maxlength ng-empty ng-dirty ng-valid-parse ng-invalid ng-invalid-required ng-invalid-valid-email ng-touched validation-invalid" id="login" name="login" type="text" placeholder="Email" required autocomplete="off" maxlength="100">
+                    <div class="validation-wrapper mt4 ng-scope">
+                        <div class="error-icon mr4"></div>
+                        <div id="error-user-name-required" class="ng-scope">
+                            Email required
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="z-validation-input mb0">
-                <input
-                    class="form-input validation-invalid"
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Password"
-                    required
-                    autocomplete="new-password">
-                <div class="validation-wrapper mt4">
-                    <div class="error-icon"></div>
-                    <div id="error-password-required">
-                        Password required
+                <div class="z-validation-input mb0">
+                    <input class="form-input login-form-field mt0 ng-pristine ng-scope ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched validation-invalid" type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password" maxlength="100">
+                    <div class="validation-wrapper mt4 ng-scope">
+                        <div class="error-icon mr4"></div>
+                        <div id="error-password-required" class="ng-scope">
+                            Password required
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="validation-wrapper mt4 ng-hide" id="invalid-credentials">
-                <div class="error-icon"></div>
-                <div>
-                    Email or password is incorrect
+                <div class="validation-wrapper mt4 ng-hide">
+                    <div class="error-icon mr4"></div>
+                    <div id="error-divin-or-password-incorrect">
+                        Email or password is incorrect
+                    </div>
                 </div>
-            </div>
-            <div class="mt8 mb16">
-                <div class="login-form-forget">
-                    <a href="#" id="forgot-password">
-                        Forgot password?
-                    </a>
+                <div class="mt8 mb16">
+                    <div class="login-form-forget">
+                        <a tabindex="0">
+                            Forgot password?
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <button type="submit" class="btn-submit">
-                Sign in
-            </button>
-        </form>
-    </main>
+                <button id="login-submit" type="submit" class="login-submit" tabindex="0">
+                    Sign in
+                </button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
